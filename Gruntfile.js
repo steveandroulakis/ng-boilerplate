@@ -197,30 +197,12 @@ module.exports = function ( grunt ) {
           '<%= build_dir %>/src/**/*.js', 
           '<%= html2js.app.dest %>', 
           '<%= html2js.common.dest %>', 
-          '<%= html2js.jade_app.dest %>', 
-          '<%= html2js.jade_common.dest %>',          
+        
           'module.suffix' 
         ],
         dest: '<%= compile_dir %>/assets/<%= pkg.name %>-<%= pkg.version %>.js'
       }
     },
-
-    /**
-     * `grunt-contrib-jade` compiles jade files to html and puts them in build_dir
-     */
-    jade: {
-      compile: {
-        files: [
-          {
-            src: [ '<%= app_files.jade %>' ],
-            cwd: '.',
-            dest: '<%= build_dir %>',
-            expand: true,
-            ext: '.html'
-          }
-        ]
-      }
-    },    
 
     /**
      * `grunt coffee` compiles the CoffeeScript sources. To work well with the
@@ -241,6 +223,15 @@ module.exports = function ( grunt ) {
         ext: '.js'
       }
     },
+
+    jade: {
+      html: {
+        expand: true,
+        src: [ '<%= app_files.jade %>' ],
+        dest: '<%= tmp_dir %>',
+        ext: '.html'
+      }
+    },    
 
     /**
      * `ngAnnotate` annotates the sources before minifying. That is, it allows us
@@ -343,6 +334,7 @@ module.exports = function ( grunt ) {
       }
     },
 
+
     /**
      * HTML2JS is a Grunt plugin that takes all of your template files and
      * places them into JavaScript files as strings that are added to
@@ -350,6 +342,7 @@ module.exports = function ( grunt ) {
      * part of the initial payload as one JavaScript file. Neat!
      */
     html2js: {
+
       /**
        * These are the templates from `src/app`.
        */
@@ -357,7 +350,7 @@ module.exports = function ( grunt ) {
         options: {
           base: 'src/app'
         },
-        src: [ '<%= app_files.atpl %>' ],
+        src: [ '<%= app_files.atpl %>', '<%= app_files.jatpl %>' ],
         dest: '<%= build_dir %>/templates-app.js'
       },
 
@@ -370,28 +363,6 @@ module.exports = function ( grunt ) {
         },
         src: [ '<%= app_files.ctpl %>' ],
         dest: '<%= build_dir %>/templates-common.js'
-      },
-      
-      /**
-       * These are the jade files from `src/app`.
-       */
-      jade_app: {
-        options: {
-          base: 'build/src/app'
-        },
-        src: [ 'build/src/app/**/*.html' ],
-        dest: '<%= build_dir %>/templates-jade-app.js'
-      },
-      
-      /**
-       * These are the jade files from `src/common`.
-       */
-      jade_common: {
-        options: {
-          base: 'build/src/common'
-        },
-        src: [ 'build/src/common/**/*.html' ],
-        dest: '<%= build_dir %>/templates-jade-common.js'
       }
 
     },
@@ -431,9 +402,7 @@ module.exports = function ( grunt ) {
           '<%= vendor_files.js %>',
           '<%= build_dir %>/src/**/*.js',
           '<%= html2js.common.dest %>',
-          '<%= html2js.app.dest %>',
-          '<%= html2js.jade_app.dest %>', 
-          '<%= html2js.jade_common.dest %>',           
+          '<%= html2js.app.dest %>',           
           '<%= vendor_files.css %>',
           '<%= build_dir %>/assets/<%= pkg.name %>-<%= pkg.version %>.css'
         ]
@@ -464,9 +433,7 @@ module.exports = function ( grunt ) {
         src: [ 
           '<%= vendor_files.js %>',
           '<%= html2js.app.dest %>',
-          '<%= html2js.common.dest %>',
-+          '<%= html2js.jade_app.dest %>', 
-+          '<%= html2js.jade_common.dest %>',          
+          '<%= html2js.common.dest %>',     
           '<%= test_files.js %>'
         ]
       }
@@ -556,13 +523,6 @@ module.exports = function ( grunt ) {
         ],
         tasks: [ 'html2js' ]
       },
-
-      jadesrc: {
-        files: [
-          '<%= app_files.jade %>'
-        ],
-        tasks: [ 'jade', 'html2js' ]
-      },      
 
       /**
        * When the CSS files change, we need to compile and minify them.

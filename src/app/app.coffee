@@ -3,8 +3,6 @@ angular.module("ngBoilerplate", [
   "templates-common"
   "ngBoilerplate.home"
   "ngBoilerplate.about"
-  "templates-jade_app"
-  "templates-jade_common"
   "ui.router"
 ]).config(myAppConfig = ($stateProvider, $urlRouterProvider) ->
   $urlRouterProvider.otherwise "/home"

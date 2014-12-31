@@ -9,6 +9,7 @@ module.exports = {
    */
   build_dir: 'build',
   compile_dir: 'bin',
+  tmp_dir: '',
 
   /**
    * This is a collection of file patterns that refer to our app code (the
@@ -28,10 +29,11 @@ module.exports = {
 
     atpl: [ 'src/app/**/*.tpl.html' ],
     ctpl: [ 'src/common/**/*.tpl.html' ],
+    jatpl: [ 'src/app/**/about.html' ],
 
     html: [ 'src/index.html' ],
     less: 'src/less/main.less',
-    jade: [ 'src/**/*.jade']
+    jade: [ 'src/app/**/*.jade' ]
   },
 
   /**

@@ -8,7 +8,7 @@ angular.module("ngBoilerplate.about", [
     views:
       main:
         controller: "AboutCtrl"
-        templateUrl: "about/about.tpl.html"
+        templateUrl: "about/about.html"
 
     data:
       pageTitle: "What is It?"
