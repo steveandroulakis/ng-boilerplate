@@ -528,6 +528,11 @@ module.exports = function ( grunt ) {
         tasks: [ 'index:build' ]
       },
 
+      jadefiles: {
+        files: [ '<%= app_files.jade %>' ],
+        tasks: [ 'jade:html', 'html2js', 'clean:jadecompile' ]
+      },      
+
       /**
        * When our templates change, we only rewrite the template cache.
        */
