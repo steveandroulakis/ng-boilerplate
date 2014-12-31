@@ -18,6 +18,7 @@ module.exports = function ( grunt ) {
   grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-ng-annotate');
   grunt.loadNpmTasks('grunt-html2js');
+  grunt.loadNpmTasks('grunt-contrib-jade');
 
   /**
    * Load in our build configuration file.
@@ -196,11 +197,30 @@ module.exports = function ( grunt ) {
           '<%= build_dir %>/src/**/*.js', 
           '<%= html2js.app.dest %>', 
           '<%= html2js.common.dest %>', 
+          '<%= html2js.jade_app.dest %>', 
+          '<%= html2js.jade_common.dest %>',          
           'module.suffix' 
         ],
         dest: '<%= compile_dir %>/assets/<%= pkg.name %>-<%= pkg.version %>.js'
       }
     },
+
+    /**
+     * `grunt-contrib-jade` compiles jade files to html and puts them in build_dir
+     */
+    jade: {
+      compile: {
+        files: [
+          {
+            src: [ '<%= app_files.jade %>' ],
+            cwd: '.',
+            dest: '<%= build_dir %>',
+            expand: true,
+            ext: '.html'
+          }
+        ]
+      }
+    },    
 
     /**
      * `grunt coffee` compiles the CoffeeScript sources. To work well with the
@@ -350,8 +370,32 @@ module.exports = function ( grunt ) {
         },
         src: [ '<%= app_files.ctpl %>' ],
         dest: '<%= build_dir %>/templates-common.js'
+      },
+      
+      /**
+       * These are the jade files from `src/app`.
+       */
+      jade_app: {
+        options: {
+          base: 'build/src/app'
+        },
+        src: [ 'build/src/app/**/*.html' ],
+        dest: '<%= build_dir %>/templates-jade-app.js'
+      },
+      
+      /**
+       * These are the jade files from `src/common`.
+       */
+      jade_common: {
+        options: {
+          base: 'build/src/common'
+        },
+        src: [ 'build/src/common/**/*.html' ],
+        dest: '<%= build_dir %>/templates-jade-common.js'
       }
+
     },
+      
 
     /**
      * The Karma configurations.
@@ -388,6 +432,8 @@ module.exports = function ( grunt ) {
           '<%= build_dir %>/src/**/*.js',
           '<%= html2js.common.dest %>',
           '<%= html2js.app.dest %>',
+          '<%= html2js.jade_app.dest %>', 
+          '<%= html2js.jade_common.dest %>',           
           '<%= vendor_files.css %>',
           '<%= build_dir %>/assets/<%= pkg.name %>-<%= pkg.version %>.css'
         ]
@@ -419,6 +465,8 @@ module.exports = function ( grunt ) {
           '<%= vendor_files.js %>',
           '<%= html2js.app.dest %>',
           '<%= html2js.common.dest %>',
++          '<%= html2js.jade_app.dest %>', 
++          '<%= html2js.jade_common.dest %>',          
           '<%= test_files.js %>'
         ]
       }
@@ -465,7 +513,7 @@ module.exports = function ( grunt ) {
         files: [ 
           '<%= app_files.js %>'
         ],
-        tasks: [ 'jshint:src', 'karma:unit:run', 'copy:build_appjs' ]
+        tasks: [ 'jshint:src', 'copy:build_appjs' ]
       },
 
       /**
@@ -476,7 +524,7 @@ module.exports = function ( grunt ) {
         files: [ 
           '<%= app_files.coffee %>'
         ],
-        tasks: [ 'coffeelint:src', 'coffee:source', 'karma:unit:run', 'copy:build_appjs' ]
+        tasks: [ 'coffeelint:src', 'coffee:source', 'copy:build_appjs' ]
       },
 
       /**
@@ -509,6 +557,13 @@ module.exports = function ( grunt ) {
         tasks: [ 'html2js' ]
       },
 
+      jadesrc: {
+        files: [
+          '<%= app_files.jade %>'
+        ],
+        tasks: [ 'jade', 'html2js' ]
+      },      
+
       /**
        * When the CSS files change, we need to compile and minify them.
        */
@@ -525,7 +580,7 @@ module.exports = function ( grunt ) {
         files: [
           '<%= app_files.jsunit %>'
         ],
-        tasks: [ 'jshint:test', 'karma:unit:run' ],
+        tasks: [ 'jshint:test' ],
         options: {
           livereload: false
         }
@@ -539,7 +594,7 @@ module.exports = function ( grunt ) {
         files: [
           '<%= app_files.coffeeunit %>'
         ],
-        tasks: [ 'coffeelint:test', 'karma:unit:run' ],
+        tasks: [ 'coffeelint:test' ],
         options: {
           livereload: false
         }
@@ -568,10 +623,9 @@ module.exports = function ( grunt ) {
    * The `build` task gets your app ready to run for development and testing.
    */
   grunt.registerTask( 'build', [
-    'clean', 'html2js', 'jshint', 'coffeelint', 'coffee', 'less:build',
+    'clean', 'jade', 'html2js', 'jshint', 'coffeelint', 'coffee', 'less:build',
     'concat:build_css', 'copy:build_app_assets', 'copy:build_vendor_assets',
-    'copy:build_appjs', 'copy:build_vendorjs', 'copy:build_vendorcss', 'index:build', 'karmaconfig',
-    'karma:continuous' 
+    'copy:build_appjs', 'copy:build_vendorjs', 'copy:build_vendorcss', 'index:build' 
   ]);
 
   /**
