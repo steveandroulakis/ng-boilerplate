@@ -88,10 +88,20 @@ module.exports = function ( grunt ) {
     /**
      * The directories to delete when `grunt clean` is executed.
      */
-    clean: [ 
-      '<%= build_dir %>', 
-      '<%= compile_dir %>'
-    ],
+    clean:
+    {
+      initial: {
+        src: [ 
+          '<%= build_dir %>', 
+          '<%= compile_dir %>'
+        ]
+      },
+      jadecompile: {
+        src: [ 
+          '<%= app_files.jatpl %>'
+        ]
+      }      
+    },
 
     /**
      * The `copy` task just copies files from A to B. We use it here to copy
@@ -224,12 +234,14 @@ module.exports = function ( grunt ) {
       }
     },
 
+    // http://stackoverflow.com/questions/14089921/how-to-copy-compiled-jade-files-to-a-destination-folder-using-grunt
+
     jade: {
       html: {
         expand: true,
         src: [ '<%= app_files.jade %>' ],
         dest: '<%= tmp_dir %>',
-        ext: '.html'
+        ext: '.jade.html'
       }
     },    
 
@@ -348,7 +360,10 @@ module.exports = function ( grunt ) {
        */
       app: {
         options: {
-          base: 'src/app'
+          base: 'src/app',
+          rename: function (moduleName) {
+                    return moduleName.replace('.jade', '.tpl');
+          }
         },
         src: [ '<%= app_files.atpl %>', '<%= app_files.jatpl %>' ],
         dest: '<%= build_dir %>/templates-app.js'
@@ -583,9 +598,10 @@ module.exports = function ( grunt ) {
    * The `build` task gets your app ready to run for development and testing.
    */
   grunt.registerTask( 'build', [
-    'clean', 'jade', 'html2js', 'jshint', 'coffeelint', 'coffee', 'less:build',
+    'clean:initial', 'jade', 'html2js', 'jshint', 'coffeelint', 'coffee', 'less:build',
     'concat:build_css', 'copy:build_app_assets', 'copy:build_vendor_assets',
-    'copy:build_appjs', 'copy:build_vendorjs', 'copy:build_vendorcss', 'index:build' 
+    'copy:build_appjs', 'copy:build_vendorjs', 'copy:build_vendorcss', 'index:build',
+    'clean:jadecompile'
   ]);
 
   /**

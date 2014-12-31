@@ -29,7 +29,7 @@ module.exports = {
 
     atpl: [ 'src/app/**/*.tpl.html' ],
     ctpl: [ 'src/common/**/*.tpl.html' ],
-    jatpl: [ 'src/app/**/about.html' ],
+    jatpl: [ 'src/app/**/*.jade.html' ],
 
     html: [ 'src/index.html' ],
     less: 'src/less/main.less',
