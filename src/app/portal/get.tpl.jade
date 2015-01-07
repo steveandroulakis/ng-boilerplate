@@ -1,0 +1,14 @@
+h2 Use get(gameid) to retrieve a single record
+  form(name='getForm', role='form')
+      .form-group
+        label(for='getGameid') Enter Gameid to get()      
+        input#getGameid.form-control(type='number', ng-required='true', ng-model='getGameid', name='getGameid')   
+      .form-group
+        button.btn.btn-primary(type='button', ng-click='getHttp(getGameid)') Get game using $http - HttpService.get(gameid)       
+        button.btn.btn-primary(type='button', ng-click='getResource(getGameid)') Get game using $resource - ResourceService.get(gameid)     
+        button.btn.btn-danger(type='button', ng-click='getReset()') Reset
+    h4 get(gameid) Results (compare to server data below, should match the appropriate gameid record)
+    .row
+      .col-md-6
+        pre
+          {{ getResults | json}}          

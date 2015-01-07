@@ -1,0 +1,19 @@
+{
+  "note": "This is a sample config file. You should change the mockDirectory to a more reasonable path.",
+  "mockDirectory": "./mocks",
+  "quiet": false,
+  "port": "3000",
+  "latency": 50,
+  "webServices": {
+    "games": {
+      "mockFile": "games.json",
+      "latency": 20,
+      "verbs": ["get"]
+    },
+    "games/:gameid": {
+      "mockFile": "games.json",
+      "verbs": ["get"],
+      "switch": "gameid"
+    }
+  }
+}

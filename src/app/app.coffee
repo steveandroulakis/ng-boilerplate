@@ -1,8 +1,12 @@
 angular.module("ngBoilerplate", [
+  "ngMockE2E" # steve todo this enables/disables intercepts
+  "ngResource"
   "templates-app"
   "templates-common"
   "ngBoilerplate.home"
   "ngBoilerplate.about"
+  "ngBoilerplate.portal"
+  "ngBoilerplate"
   "ui.router"
 ]).config(myAppConfig = ($stateProvider, $urlRouterProvider) ->
   $urlRouterProvider.otherwise "/home"

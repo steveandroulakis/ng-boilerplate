@@ -1,0 +1,597 @@
+{
+  "meta": {
+    "limit": 20,
+    "next": null,
+    "offset": 0,
+    "previous": null,
+    "total_count": 8
+  },
+  "objects": [
+    {
+      "approved": false,
+      "authors": [
+        {
+          "name": "Michael J. I. Brown",
+          "url": ""
+        },
+        {
+          "name": "John Moustakas",
+          "url": ""
+        },
+        {
+          "name": "J.-D. T. Smith",
+          "url": ""
+        },
+        {
+          "name": "Elisabete da Cunha",
+          "url": ""
+        },
+        {
+          "name": "T. H. Jarrett",
+          "url": ""
+        },
+        {
+          "name": "Masatoshi Imanishi",
+          "url": ""
+        },
+        {
+          "name": "Lee Armus",
+          "url": ""
+        },
+        {
+          "name": "Bernhard R. Brandl",
+          "url": ""
+        },
+        {
+          "name": "J. E. G. Peek",
+          "url": ""
+        }
+      ],
+      "created_by": "\/api\/v1\/user\/23\/",
+      "created_time": "2014-05-28T11:48:22.408825",
+      "description": "This is the archive for \"An Atlas of Galaxy Spectral Energy Distributions From The UV to the Mid-Infrared\". The first folder contains the spectral energy distributions and csv tables of galaxy information, photometry and foreground dust extinction values. The folders named after individual galaxies contain the images from which the photometry was measured. \r\n\r\nThe relevant paper was published in the Astrophysical Journal Supplement Series and is available via http:\/\/dx.doi.org\/10.1088\/0067-0049\/212\/2\/18. A brief video introduction to the atlas is available via https:\/\/www.youtube.com\/watch?v=lhC8ViPGoqU. \r\n\r\nThe beta version of the atlas, which was released when the paper was submitted, is available via http:\/\/vera183.its.monash.edu.au\/experiment\/view\/104\/. The abstract of the paper follows.\r\n\r\nWe present an atlas of 129 spectral energy distributions for nearby galaxies, with wavelength coverage spanning from the ultraviolet to the mid-infrared. Our atlas spans a broad range of galaxy types, including ellipticals, spirals, merging galaxies, blue compact dwarfs, and luminous infrared galaxies. We have combined ground-based optical drift-scan spectrophotometry with infrared spectroscopy from Spitzer and Akari with gaps in spectral coverage being \u00ef\u00ac\u0081lled using Multi-wavelength Analysis of Galaxy Physical Properties spectral energy distribution models. The spectroscopy and models were normalized, constrained, and veri\u00ef\u00ac\u0081ed with matched-aperture photometry measured from Swift, Galaxy Evolution Explorer, Sloan Digital Sky Survey, Two Micron All Sky Survey, Spitzer, and Wide-\u00ef\u00ac\u0081eld Infrared Space Explorer images. The availability of 26 photometric bands allowed us to identify and mitigate systematic errors present in the data. Comparison of our spectral energy distributions with other template libraries and the observed colors of galaxies indicates that we have smaller systematic errors than existing atlases, while spanning a broader range of galaxy types. Relative to the prior literature, our atlas will provide improved K-corrections, photometric redshifts, and star-formation rate calibrations.\r\n",
+      "end_time": null,
+      "handle": "",
+      "id": 123,
+      "institution_name": "Monash University",
+      "license": {
+        "allows_distribution": true,
+        "description": "This licence lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. This is the most accommodating of licences offered under Creative Commons.",
+        "image_url": "http:\/\/i.creativecommons.org\/l\/by\/3.0\/au\/88x31.png",
+        "name": "Creative Commons Attribution 3.0 Australia (CC BY 3.0)",
+        "url": "http:\/\/creativecommons.org\/licenses\/by\/3.0\/au\/"
+      },
+      "locked": false,
+      "owner_ids": [
+        23
+      ],
+      "parameter_sets": [
+        
+      ],
+      "public_access": 100,
+      "resource_uri": "\/api\/v1\/experiment\/123\/",
+      "start_time": null,
+      "title": "An Atlas of Galaxy Spectral Energy Distributions From The UV to the Mid-Infrared",
+      "update_time": "2014-06-20T13:53:47.675787",
+      "url": null
+    },
+    {
+      "approved": false,
+      "authors": [
+        {
+          "name": "Sharna Jamadar",
+          "url": ""
+        }
+      ],
+      "created_by": "\/api\/v1\/user\/18\/",
+      "created_time": "2013-02-19T15:25:50.991261",
+      "description": "ROIs created from GingerALE (v2.1) meta-analysis of antisaccades and prosaccades reported in:\r\n\r\nJamadar, Fielding, Egan (2013). Quantitative meta-analysis of fMRI and PET studies reveals consistent activation in fronto-striatal-parietal regions and cerebellum during antisaccades and prosaccades. Front. Psychol. 4:749. doi: 10.3389\/fpsyg.2013.00749\r\n\r\nROIs are given for 2 meta-analyses (antisaccade > fixation, antisaccade > prosaccade) presented in the above paper. The ROIs are given in nii format in MNI space. \r\n\r\nThe naming convention is: contrast_x_y_z_label_cluster# e.g. AS-PS_-2_-56_50_LPCUN_9 is from antisaccade - prosaccade analysis, tal coordinates (-2, -56, 50), left precuneus, cluster #9. Cluster number refers to the number given in Tables 2-4 in the manuscript. Labels are a guide only and were calculated from the peak ALE value within the cluster (Tables 2-4, Jamadar et al.). \r\n\r\nPlease cite the above paper if you use these ROIs in your analysis. Any queries email Sharna Jamadar: sharna.jamadar@monash.edu or sharna.jamadar@gmail.com",
+      "end_time": null,
+      "handle": "",
+      "id": 44,
+      "institution_name": "Monash University (Monash Biomedical Imaging)",
+      "license": {
+        "allows_distribution": true,
+        "description": "This licence is the most restrictive Creative Commons licence, only allowing others to download your works and share them with others as long as they credit you, but they can\u00e2\u20ac\u2122t change them in any way or use them commercially.",
+        "image_url": "http:\/\/i.creativecommons.org\/l\/by-nc-nd\/3.0\/au\/88x31.png",
+        "name": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Australia (CC BY-NC-ND 3.0)",
+        "url": "http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/au\/"
+      },
+      "locked": false,
+      "owner_ids": [
+        18,
+        1
+      ],
+      "parameter_sets": [
+        {
+          "experiment": "\/api\/v1\/experiment\/44\/",
+          "id": 18,
+          "parameters": [
+            {
+              "datetime_value": null,
+              "id": 46,
+              "name": "\/api\/v1\/parametername\/121\/",
+              "numerical_value": null,
+              "parameterset": "\/api\/v1\/experimentparameterset\/18\/",
+              "resource_uri": "\/api\/v1\/experimentparameter\/46\/",
+              "string_value": "publication",
+              "value": null
+            },
+            {
+              "datetime_value": null,
+              "id": 47,
+              "name": "\/api\/v1\/parametername\/123\/",
+              "numerical_value": null,
+              "parameterset": "\/api\/v1\/experimentparameterset\/18\/",
+              "resource_uri": "\/api\/v1\/experimentparameter\/47\/",
+              "string_value": "DOI",
+              "value": null
+            },
+            {
+              "datetime_value": null,
+              "id": 45,
+              "name": "\/api\/v1\/parametername\/122\/",
+              "numerical_value": null,
+              "parameterset": "\/api\/v1\/experimentparameterset\/18\/",
+              "resource_uri": "\/api\/v1\/experimentparameter\/45\/",
+              "string_value": "http:\/\/dx.doi.org\/10.5072\/03\/51230AD72FDF9",
+              "value": null
+            },
+            {
+              "datetime_value": null,
+              "id": 44,
+              "name": "\/api\/v1\/parametername\/124\/",
+              "numerical_value": null,
+              "parameterset": "\/api\/v1\/experimentparameterset\/18\/",
+              "resource_uri": "\/api\/v1\/experimentparameter\/44\/",
+              "string_value": "Digital Object Identifier to this data.",
+              "value": null
+            }
+          ],
+          "resource_uri": "\/api\/v1\/experimentparameterset\/18\/",
+          "schema": {
+            "hidden": false,
+            "id": 14,
+            "immutable": false,
+            "name": "Related Info",
+            "namespace": "http:\/\/ands.org.au\/standards\/rif-cs\/registryObjects#relatedInfo",
+            "resource_uri": "\/api\/v1\/schema\/14\/",
+            "subtype": "related-info-experiment",
+            "type": 1
+          }
+        }
+      ],
+      "public_access": 100,
+      "resource_uri": "\/api\/v1\/experiment\/44\/",
+      "start_time": null,
+      "title": "Jamadar et al 2013 Antisaccade ROIs",
+      "update_time": "2013-10-04T12:29:43.700579",
+      "url": ""
+    },
+    {
+      "approved": false,
+      "authors": [
+        {
+          "name": "Simon W. M. Tanley",
+          "url": ""
+        },
+        {
+          "name": "Antoine M. M. Schreurs",
+          "url": ""
+        },
+        {
+          "name": "John R. Helliwell and Loes M. J. Kroon-Batenburg",
+          "url": ""
+        }
+      ],
+      "created_by": "\/api\/v1\/user\/1\/",
+      "created_time": "2013-01-31T13:16:55.445144",
+      "description": "Mirrored from http:\/\/rawdata.chem.uu.nl\/ ..\r\n\r\nLicensed CC-BY, with attribution to: Simon W. M. Tanley, Antoine M. M. Schreurs, John R. Helliwell and Loes M. J. Kroon-Batenburg\r\n<a href=\"http:\/\/dx.doi.org\/10.1107\/S0021889812044172\">Journal of Applied Crystallography, 2013, Volume 46, pages 108-119 reprint<\/a> (PDF file, 1.8 Mb)",
+      "end_time": null,
+      "handle": "",
+      "id": 40,
+      "institution_name": "Utrecht University",
+      "license": {
+        "allows_distribution": true,
+        "description": "This licence lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. This is the most accommodating of licences offered under Creative Commons.",
+        "image_url": "http:\/\/i.creativecommons.org\/l\/by\/3.0\/au\/88x31.png",
+        "name": "Creative Commons Attribution 3.0 Australia (CC BY 3.0)",
+        "url": "http:\/\/creativecommons.org\/licenses\/by\/3.0\/au\/"
+      },
+      "locked": false,
+      "owner_ids": [
+        1
+      ],
+      "parameter_sets": [
+        {
+          "experiment": "\/api\/v1\/experiment\/40\/",
+          "id": 15,
+          "parameters": [
+            {
+              "datetime_value": null,
+              "id": 29,
+              "name": "\/api\/v1\/parametername\/121\/",
+              "numerical_value": null,
+              "parameterset": "\/api\/v1\/experimentparameterset\/15\/",
+              "resource_uri": "\/api\/v1\/experimentparameter\/29\/",
+              "string_value": "publication",
+              "value": null
+            },
+            {
+              "datetime_value": null,
+              "id": 30,
+              "name": "\/api\/v1\/parametername\/123\/",
+              "numerical_value": null,
+              "parameterset": "\/api\/v1\/experimentparameterset\/15\/",
+              "resource_uri": "\/api\/v1\/experimentparameter\/30\/",
+              "string_value": "Journal of Applied Crystallography",
+              "value": null
+            },
+            {
+              "datetime_value": null,
+              "id": 28,
+              "name": "\/api\/v1\/parametername\/122\/",
+              "numerical_value": null,
+              "parameterset": "\/api\/v1\/experimentparameterset\/15\/",
+              "resource_uri": "\/api\/v1\/experimentparameter\/28\/",
+              "string_value": "http:\/\/scripts.iucr.org\/cgi-bin\/paper?S0021889812044172",
+              "value": null
+            },
+            {
+              "datetime_value": null,
+              "id": 27,
+              "name": "\/api\/v1\/parametername\/124\/",
+              "numerical_value": null,
+              "parameterset": "\/api\/v1\/experimentparameterset\/15\/",
+              "resource_uri": "\/api\/v1\/experimentparameter\/27\/",
+              "string_value": "Journal of Applied Crystallography, 2013, Volume 46, pages 108-119 reprint",
+              "value": null
+            }
+          ],
+          "resource_uri": "\/api\/v1\/experimentparameterset\/15\/",
+          "schema": {
+            "hidden": false,
+            "id": 14,
+            "immutable": false,
+            "name": "Related Info",
+            "namespace": "http:\/\/ands.org.au\/standards\/rif-cs\/registryObjects#relatedInfo",
+            "resource_uri": "\/api\/v1\/schema\/14\/",
+            "subtype": "related-info-experiment",
+            "type": 1
+          }
+        },
+        {
+          "experiment": "\/api\/v1\/experiment\/40\/",
+          "id": 16,
+          "parameters": [
+            {
+              "datetime_value": null,
+              "id": 41,
+              "name": "\/api\/v1\/parametername\/121\/",
+              "numerical_value": null,
+              "parameterset": "\/api\/v1\/experimentparameterset\/16\/",
+              "resource_uri": "\/api\/v1\/experimentparameter\/41\/",
+              "string_value": "website",
+              "value": null
+            },
+            {
+              "datetime_value": null,
+              "id": 42,
+              "name": "\/api\/v1\/parametername\/123\/",
+              "numerical_value": null,
+              "parameterset": "\/api\/v1\/experimentparameterset\/16\/",
+              "resource_uri": "\/api\/v1\/experimentparameter\/42\/",
+              "string_value": "Mirror",
+              "value": null
+            },
+            {
+              "datetime_value": null,
+              "id": 40,
+              "name": "\/api\/v1\/parametername\/122\/",
+              "numerical_value": null,
+              "parameterset": "\/api\/v1\/experimentparameterset\/16\/",
+              "resource_uri": "\/api\/v1\/experimentparameter\/40\/",
+              "string_value": "http:\/\/rawdata.chem.uu.nl\/",
+              "value": null
+            },
+            {
+              "datetime_value": null,
+              "id": 39,
+              "name": "\/api\/v1\/parametername\/124\/",
+              "numerical_value": null,
+              "parameterset": "\/api\/v1\/experimentparameterset\/16\/",
+              "resource_uri": "\/api\/v1\/experimentparameter\/39\/",
+              "string_value": "This data was mirrored from data stored at Utrecht University",
+              "value": null
+            }
+          ],
+          "resource_uri": "\/api\/v1\/experimentparameterset\/16\/",
+          "schema": {
+            "hidden": false,
+            "id": 14,
+            "immutable": false,
+            "name": "Related Info",
+            "namespace": "http:\/\/ands.org.au\/standards\/rif-cs\/registryObjects#relatedInfo",
+            "resource_uri": "\/api\/v1\/schema\/14\/",
+            "subtype": "related-info-experiment",
+            "type": 1
+          }
+        },
+        {
+          "experiment": "\/api\/v1\/experiment\/40\/",
+          "id": 17,
+          "parameters": [
+            {
+              "datetime_value": null,
+              "id": 43,
+              "name": "\/api\/v1\/parametername\/124\/",
+              "numerical_value": null,
+              "parameterset": "\/api\/v1\/experimentparameterset\/17\/",
+              "resource_uri": "\/api\/v1\/experimentparameter\/43\/",
+              "string_value": "Calgary E-Research Demo",
+              "value": null
+            }
+          ],
+          "resource_uri": "\/api\/v1\/experimentparameterset\/17\/",
+          "schema": {
+            "hidden": false,
+            "id": 14,
+            "immutable": false,
+            "name": "Related Info",
+            "namespace": "http:\/\/ands.org.au\/standards\/rif-cs\/registryObjects#relatedInfo",
+            "resource_uri": "\/api\/v1\/schema\/14\/",
+            "subtype": "related-info-experiment",
+            "type": 1
+          }
+        }
+      ],
+      "public_access": 100,
+      "resource_uri": "\/api\/v1\/experiment\/40\/",
+      "start_time": null,
+      "title": "Experience with exchange and archiving of raw data: comparison of data from two diffractometers and four software packages on a series of lysozyme crystals",
+      "update_time": "2013-02-06T10:08:57.131277",
+      "url": null
+    },
+    {
+      "approved": false,
+      "authors": [
+        {
+          "name": "Sharna Jamadar",
+          "url": ""
+        },
+        {
+          "name": "Renate Thienel",
+          "url": ""
+        },
+        {
+          "name": "Frini Karayanidis",
+          "url": ""
+        }
+      ],
+      "created_by": "\/api\/v1\/user\/18\/",
+      "created_time": "2014-06-19T20:57:52.645437",
+      "description": "Full methods and results for the ALE meta-analysis of task-switching fMRI studies presented in Jamadar, Thienel, Karayanidis (2014)",
+      "end_time": null,
+      "handle": "",
+      "id": 126,
+      "institution_name": "Monash University",
+      "license": {
+        "allows_distribution": true,
+        "description": "This licence lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. This is the most accommodating of licences offered under Creative Commons.",
+        "image_url": "http:\/\/i.creativecommons.org\/l\/by\/3.0\/au\/88x31.png",
+        "name": "Creative Commons Attribution 3.0 Australia (CC BY 3.0)",
+        "url": "http:\/\/creativecommons.org\/licenses\/by\/3.0\/au\/"
+      },
+      "locked": false,
+      "owner_ids": [
+        1,
+        18
+      ],
+      "parameter_sets": [
+        
+      ],
+      "public_access": 100,
+      "resource_uri": "\/api\/v1\/experiment\/126\/",
+      "start_time": null,
+      "title": "Jamadar, Thienel, Karayanidis 2014 ALE Meta-Analysis Methods and Results",
+      "update_time": "2014-06-22T11:28:05.388381",
+      "url": null
+    },
+    {
+      "approved": false,
+      "authors": [
+        {
+          "name": "Monica Prakash",
+          "url": ""
+        },
+        {
+          "name": "Oded Kleifeld",
+          "url": ""
+        },
+        {
+          "name": "Bosco Ho",
+          "url": ""
+        },
+        {
+          "name": "Phil Bird",
+          "url": ""
+        }
+      ],
+      "created_by": "\/api\/v1\/user\/2\/",
+      "created_time": "2013-05-01T13:55:15.843855",
+      "description": "<strong>Instructions (click 'Toggle Full Description')<\/strong>\r\n<ol>\r\n<li>In the top right-hand corner, there is one dataset available for download. Click the button labelled 'TAR'.<\/li>\r\n<li>The dataset is downloaded as a WinZip (.zip) file. Extract the files to the desired location.<\/li>\r\n<li>Once extracted, there will be 5 files in total. Use your internet browser to open the file named 'index.html' to access the data. This file can be opened in any standard browser, but works best in Mozilla Firefox or Google Chrome.<\/li>\r\n<li>In the left panel is a list of all the proteins identified in the MS analysis. When you click on a particular protein, the corresponding peptograph appears in the centre panel, which shows the peptides detected for each protein (Dix et al., 2008). Peptides detected in the \u00e2\u20ac\u02dcno protease\u00e2\u20ac\u2122 control are represented in green, and peptides in the mouse GrB treated sample are represented in red. When you click on a specific peptide, the MS data for that peptide appears in the right panel.<\/li>\r\n<\/ol>",
+      "end_time": null,
+      "handle": "",
+      "id": 55,
+      "institution_name": "Monash University",
+      "license": {
+        "allows_distribution": true,
+        "description": "This licence is the most restrictive Creative Commons licence, only allowing others to download your works and share them with others as long as they credit you, but they can\u00e2\u20ac\u2122t change them in any way or use them commercially.",
+        "image_url": "http:\/\/i.creativecommons.org\/l\/by-nc-nd\/3.0\/au\/88x31.png",
+        "name": "Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Australia (CC BY-NC-ND 3.0)",
+        "url": "http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/au\/"
+      },
+      "locked": false,
+      "owner_ids": [
+        2
+      ],
+      "parameter_sets": [
+        
+      ],
+      "public_access": 100,
+      "resource_uri": "\/api\/v1\/experiment\/55\/",
+      "start_time": null,
+      "title": "mGrB Protomap Label-free",
+      "update_time": "2013-11-13T13:39:23.686645",
+      "url": null
+    },
+    {
+      "approved": false,
+      "authors": [
+        {
+          "name": "Richard Beare",
+          "url": ""
+        },
+        {
+          "name": "Michael Brown",
+          "url": ""
+        },
+        {
+          "name": "Kevin Pimbblet",
+          "url": ""
+        }
+      ],
+      "created_by": "\/api\/v1\/user\/27\/",
+      "created_time": "2014-10-27T12:18:19.656046",
+      "description": "This archive contains data in CSV format from Tables 2 to 6 of, \"An accurate new method of calculating absolute magnitudes and K-corrections applied to the Sloan filter set\", which has been submitted to the \"Astrophysical Journal\". The 10 tables list second order polynomial coefficients for use in determining absolute magnitudes from observed colors, two alternative colors being given for each of the Sloan u, g, r, i, z-bands, as described in the paper.\r\n\r\nWe describe an accurate new method for determining absolute magnitudes, and hence also K-corrections, which is simpler than most previous methods, being based on a quadratic function of just one suitably chosen observed color. The method relies on the extensive and accurate new set of 129 empirical galaxy template SEDs from Brown et al. (2014). A key advantage of our method is that we can reliably estimate random errors in computed absolute magnitudes due to galaxy diversity, photometric error and redshift error. We derive K-corrections for the five Sloan Digital Sky Survey filters and provide parameter tables for use by the astronomical community. Using the New York Value-Added Galaxy Catalog we compare our K-corrections with those from kcorrect. Our K-corrections produce absolute magnitudes that are generally in good agreement with kcorrect. Absolute g, r, i, z-band magnitudes differ by less than 0.02 mag, and those in the u-band by ~0.04 mag. The evolution of rest-frame colors as a function of redshift is better behaved using our method, with relatively few galaxies being assigned anomalously red colors and a tight red sequence being observed across the whole 0.0 < z < 0.5 redshift range.",
+      "end_time": null,
+      "handle": "",
+      "id": 140,
+      "institution_name": "Monash University",
+      "license": {
+        "allows_distribution": true,
+        "description": "This licence lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. This is the most accommodating of licences offered under Creative Commons.",
+        "image_url": "http:\/\/i.creativecommons.org\/l\/by\/3.0\/au\/88x31.png",
+        "name": "Creative Commons Attribution 3.0 Australia (CC BY 3.0)",
+        "url": "http:\/\/creativecommons.org\/licenses\/by\/3.0\/au\/"
+      },
+      "locked": false,
+      "owner_ids": [
+        27
+      ],
+      "parameter_sets": [
+        
+      ],
+      "public_access": 100,
+      "resource_uri": "\/api\/v1\/experiment\/140\/",
+      "start_time": null,
+      "title": "An accurate new method of calculating absolute magnitudes and K-corrections applied to the Sloan filter set",
+      "update_time": "2014-10-27T12:28:17.861358",
+      "url": null
+    },
+    {
+      "approved": false,
+      "authors": [
+        {
+          "name": "Steve Androulakis",
+          "url": ""
+        }
+      ],
+      "created_by": "\/api\/v1\/user\/1\/",
+      "created_time": "2012-10-15T13:41:42.181987",
+      "description": "Demo experiment for the video",
+      "end_time": null,
+      "handle": "",
+      "id": 27,
+      "institution_name": "Monash University",
+      "license": {
+        "allows_distribution": true,
+        "description": "This licence lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. This is the most accommodating of licences offered under Creative Commons.",
+        "image_url": "http:\/\/i.creativecommons.org\/l\/by\/3.0\/au\/88x31.png",
+        "name": "Creative Commons Attribution 3.0 Australia (CC BY 3.0)",
+        "url": "http:\/\/creativecommons.org\/licenses\/by\/3.0\/au\/"
+      },
+      "locked": false,
+      "owner_ids": [
+        1
+      ],
+      "parameter_sets": [
+        
+      ],
+      "public_access": 100,
+      "resource_uri": "\/api\/v1\/experiment\/27\/",
+      "start_time": null,
+      "title": "Demo Experiment",
+      "update_time": "2012-10-15T13:48:41.365465",
+      "url": null
+    },
+    {
+      "approved": false,
+      "authors": [
+        {
+          "name": "Michael J. I. Brown",
+          "url": ""
+        },
+        {
+          "name": "John Moustakas",
+          "url": ""
+        },
+        {
+          "name": "J.-D. T. Smith",
+          "url": ""
+        },
+        {
+          "name": "Elisabete da Cunha",
+          "url": ""
+        },
+        {
+          "name": "T. H. Jarrett",
+          "url": ""
+        },
+        {
+          "name": "Masatoshi Imanishi",
+          "url": ""
+        },
+        {
+          "name": "Lee Armus",
+          "url": ""
+        },
+        {
+          "name": "Bernhard R. Brandl",
+          "url": ""
+        },
+        {
+          "name": "J. E. G. Peek",
+          "url": ""
+        }
+      ],
+      "created_by": "\/api\/v1\/user\/23\/",
+      "created_time": "2013-12-11T09:06:08.515700",
+      "description": "This is the Beta version of \"An Atlas of Galaxy Spectral Energy Distributions From The UV to the Mid-Infrared\" and will be updated once the paper is accepted for publication. The first folder contains all the SEDs, while the folders for individual galaxies contain the SEDs and images used to constrain and verify the SEDs. \r\n\r\nWe present an atlas of 129 spectral energy distributions for nearby galaxies, with wavelength coverage spanning from the UV to the mid-infrared. Our atlas spans a broad range of galaxy types, including ellipticals, spirals, merging galaxies, blue compact dwarfs and luminous infrared galaxies. We have combined ground-based optical drift-scan spectrophotometry with infrared spectroscopy from Spitzer and Akari, with gaps in spectral coverage being filled using MAGPHYS models. The spectroscopy and models were normalized, constrained and verified using matched aperture photometry measured using imaging from Swift, GALEX, SDSS, 2MASS, Spitzer and WISE. The availability of 26 photometric bands allowed us to identify and mitigate systematic errors present in the data. Comparison of our spectral energy distributions with other template libraries and the observed colors of galaxies indicates that we have smaller systematic errors than existing atlases, while spanning a broader range of galaxy types. Relative to the prior literature, our atlas will provide improved k-corrections, photometric redshifts and star-formation rate calibrations.\r\n\r\nThe preprint is available via http:\/\/arxiv.org\/abs\/1312.3029",
+      "end_time": null,
+      "handle": "",
+      "id": 104,
+      "institution_name": "Monash University",
+      "license": {
+        "allows_distribution": true,
+        "description": "This licence lets others distribute, remix, tweak, and build upon your work, even commercially, as long as they credit you for the original creation. This is the most accommodating of licences offered under Creative Commons.",
+        "image_url": "http:\/\/i.creativecommons.org\/l\/by\/3.0\/au\/88x31.png",
+        "name": "Creative Commons Attribution 3.0 Australia (CC BY 3.0)",
+        "url": "http:\/\/creativecommons.org\/licenses\/by\/3.0\/au\/"
+      },
+      "locked": false,
+      "owner_ids": [
+        23
+      ],
+      "parameter_sets": [
+        
+      ],
+      "public_access": 100,
+      "resource_uri": "\/api\/v1\/experiment\/104\/",
+      "start_time": null,
+      "title": "An Atlas of Galaxy Spectral Energy Distributions from the Ultraviolet to The Mid-Infrared (BETA)",
+      "update_time": "2013-12-13T12:35:50.410373",
+      "url": null
+    }
+  ]
+}
