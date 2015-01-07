@@ -77,7 +77,8 @@ module.exports = {
       'vendor/hammerjs/hammer.js'
     ],
     css: [
-      'vendor/angular-material/angular-material.css'
+      'vendor/angular-material/angular-material.css',
+      'vendor/angular-material/themes/light-green-theme.css'
     ],
     assets: [
     ]

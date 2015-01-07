@@ -9,7 +9,12 @@ angular.module("ngBoilerplate", [
   "ngBoilerplate"
   "ui.router"
   "ngMaterial"
-]).config(myAppConfig = ($stateProvider, $urlRouterProvider) ->
+]).config( \
+myAppConfig = \
+($stateProvider, $urlRouterProvider, $mdThemingProvider) ->
+
+  $mdThemingProvider.theme('light-green')
+
   $urlRouterProvider.otherwise "/home"
   $stateProvider.state("app",
     controller: "AppCtrl"
@@ -41,21 +46,31 @@ angular.module("ngBoilerplate", [
   )
   return
 ).run(run = ->
-).controller "AppCtrl", AppCtrl = ($scope, $location, $state) ->
+).controller("AppCtrl", AppCtrl = \
+($scope, $location, $state, $timeout, $mdSidenav, $log) ->
   $scope.$on "$stateChangeSuccess", \
   (event, toState, toParams, fromState, fromParams) ->
-    $scope.pageTitle = toState.data.pageTitle + \
-    " | ngBoilerplate"  if angular.isDefined(toState.data.pageTitle)
+    $scope.pageTitle = toState.data.pageTitle \
+      if angular.isDefined(toState.data.pageTitle)
     return
 
-  # This is simple a demo for UI Boostrap.
-  $scope.dropdownDemoItems = [
-    "The first choice!"
-    "And another choice for you."
-    "but wait! A third!"
-  ]
-
   $scope.states = $state.get()
-  console.log($state.get())
+
+  $scope.toggleLeft = ->
+    $mdSidenav("left").toggle().then ->
+      $log.debug "toggle left is done"
+      return
+
+    return
+
+  return
+
+).controller "LeftCtrl", ($scope, $timeout, $mdSidenav, $log) ->
+  $scope.close = ->
+    $mdSidenav("left").close().then ->
+      $log.debug "close LEFT is done"
+      return
+
+    return
 
   return
