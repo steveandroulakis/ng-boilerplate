@@ -1,18 +1,6 @@
 angular.module("ngBoilerplate.portal", [
   "ui.router"
-]).config(config = ($stateProvider) ->
-  $stateProvider.state "portal",
-    url: "/portal"
-    views:
-      main:
-        controller: "PortalCtrl"
-        templateUrl: "portal/get.tpl.html"
-
-    data:
-      pageTitle: "Portal"
-
-  return
-).controller "PortalCtrl",
+]).controller "PortalCtrl",
 ($scope, ResourceService, HttpService, ServerDataModel) ->
   
   # putting our server data on scope to display it for learning purposes

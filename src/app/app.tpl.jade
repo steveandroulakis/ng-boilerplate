@@ -1,0 +1,5 @@
+div.navbar(flex-gt-sm='33', flex='')
+  ul
+    li(ng-repeat='state in states' ng-if='state.data.pageTitle != null')
+      a(ui-sref='{{state.name}}') {{state.data.pageTitle}}
+div(flex-gt-sm='66', flex='', ui-view='main')
