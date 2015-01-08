@@ -1,6 +1,5 @@
 angular.module("ngBoilerplate.about", [
   "ui.router"
-  "placeholders"
 ]).controller "AboutCtrl", AboutCtrl = ($scope) ->
   
   # This is simple a demo for UI Boostrap.

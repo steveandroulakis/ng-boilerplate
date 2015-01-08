@@ -19,6 +19,7 @@ module.exports = function ( grunt ) {
   grunt.loadNpmTasks('grunt-ng-annotate');
   grunt.loadNpmTasks('grunt-html2js');
   grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-serve');
 
   /**
    * Load in our build configuration file.

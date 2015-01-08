@@ -1,7 +1,7 @@
 section(layout='row', flex='')
   md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id='left', md-is-locked-open="$media('gt-md')")
     md-toolbar.md-theme-indigo
-      h1.md-toolbar-tools Sidenav Left
+      h1.md-toolbar-tools Menu
     md-content.md-padding
       md-button.md-primary(ui-sref='{{state.name}}', ng-repeat='state in states'
       ng-if='state.data.pageTitle != null', style='display: block')
