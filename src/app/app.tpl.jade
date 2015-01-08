@@ -3,10 +3,10 @@ section(layout='row', flex='')
     md-toolbar.md-theme-indigo
       h1.md-toolbar-tools Menu
     md-content.md-padding
-      md-button.md-primary(ui-sref='{{state.name}}', ng-repeat='state in states'
+      md-button.md-primary(ui-sref-active='md-light-green-theme', ui-sref='{{state.name}}', ng-click='navgo(state.name)', ng-repeat='state in states'
       ng-if='state.data.pageTitle != null', style='display: block')
         | {{state.data.pageTitle}}
-      md-button.md-primary(ng-click='close()', hide-gt-md='', ng-controller='LeftCtrl')
+      md-button.md-primary(ng-click='close()', hide-gt-md='')
         | Close Sidenav Left
       p(hide-md='', show-gt-md='')
         | This sidenav is locked open on your device. To go back to the default behavior,

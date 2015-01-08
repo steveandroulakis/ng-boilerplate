@@ -56,21 +56,20 @@ myAppConfig = \
 
   $scope.states = $state.get()
 
+  # compliments ui-sref='{{state.name}}' in tpl
+  # to close navbar if mobile view
+  $scope.navgo = ($name) ->
+    $mdSidenav("left").close()
+
   $scope.toggleLeft = ->
     $mdSidenav("left").toggle().then ->
       $log.debug "toggle left is done"
       return
 
-    return
-
-  return
-
-).controller "LeftCtrl", ($scope, $timeout, $mdSidenav, $log) ->
   $scope.close = ->
     $mdSidenav("left").close().then ->
       $log.debug "close LEFT is done"
       return
 
-    return
-
   return
+)
