@@ -1,14 +1,24 @@
-h2 Use get(gameid) to retrieve a single record
-  form(name='getForm', role='form')
-      .form-group
-        label(for='getGameid') Enter Gameid to get()      
-        input#getGameid.form-control(type='number', ng-required='true', ng-model='getGameid', name='getGameid')   
-      .form-group
-        button.btn.btn-primary(type='button', ng-click='getHttp(getGameid)') Get game using $http - HttpService.get(gameid)       
-        button.btn.btn-primary(type='button', ng-click='getResource(getGameid)') Get game using $resource - ResourceService.get(gameid)     
-        button.btn.btn-danger(type='button', ng-click='getReset()') Reset
-    h4 get(gameid) Results (compare to server data below, should match the appropriate gameid record)
-    .row
-      .col-md-6
-        pre
-          {{ getResults | json}}          
+section.md-whiteframe-z1(layout='row', layout-sm='column', layout-align='center center')
+  p Use get(gameid) to retrieve a single record:
+section(layout='column', layout-sm='column', layout-align='center center')
+    p
+      md-text-float.md-default-theme(label='Enter GameId()', type='number',
+      ng-required='true', ng-model='getGameid', name='getGameid')
+    h3 Using...
+section(layout='row', layout-sm='column', layout-align='space-around center')
+    md-button.md-raised.md-button.md-default-theme(ng-click='getHttp(getGameid)')
+      span.ng-scope $http
+      .md-ripple-container
+    md-button.md-raised.md-button.md-default-theme(ng-click='getResource(getGameid)')   
+      span.ng-scope $resource
+      .md-ripple-container
+    md-button.md-raised.md-button.md-default-theme(ng-click='getReset()')
+      span.ng-scope Reset
+      .md-ripple-container    
+section.comparebox.md-whiteframe-z1(layout='row',
+layout-sm='column', layout-align='center center')
+  div(flex='55') Get(gameid) Results (Compare to server data below,
+    | should match the appropriate gameid record)
+  div.resultbox(flex='45')
+    pre Result
+      | {{ getResults | json}}

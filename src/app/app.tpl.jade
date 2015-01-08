@@ -1,4 +1,4 @@
-section(layout='row', flex='')
+div(layout='row', flex='')
   md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id='left', md-is-locked-open="$media('gt-md')")
     md-toolbar.md-theme-indigo
       h1.md-toolbar-tools Menu
@@ -6,20 +6,13 @@ section(layout='row', flex='')
       md-button.md-primary(ui-sref-active='md-light-green-theme', ui-sref='{{state.name}}', ng-click='navgo(state.name)', ng-repeat='state in states'
       ng-if='state.data.pageTitle != null', style='display: block')
         | {{state.data.pageTitle}}
-      md-button.md-primary(ng-click='close()', hide-gt-md='')
-        | Close Sidenav Left
-      p(hide-md='', show-gt-md='')
-        | This sidenav is locked open on your device. To go back to the default behavior,
-        | narrow your display.
-  md-content.md-padding(flex='')
+  md-content(flex='')
     div(layout='column', layout-fill='', layout-align='center center')
       md-toolbar.demo-toolbar.md-light-green-theme
         .md-toolbar-tools
           span.md-flex {{pageTitle}}
-      md-content.md-default-theme
-        p
-          | The left sidenav will 'lock open' on a medium (greater than 960px wide) device.
-        div
-          md-button.md-primary(ng-click='toggleLeft()', hide-gt-md='')
-            | Toggle left      
+      md-content.md-padding.md-default-theme(style='height: 600px; width: 100%')
+        section.md-whiteframe-z1(layout='row', layout-sm='column', layout-align='center center')
+          md-button.md-accent.md-hue-6(ng-click='toggleLeft()', hide-gt-md='')
+            | MENU     
         div(ui-view='main')
